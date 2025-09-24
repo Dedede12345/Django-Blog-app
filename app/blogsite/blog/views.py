@@ -4,7 +4,7 @@ from django.http import Http404
 # Create your views here.
 
 def post_list(request):
-    posts = Post.objects.all()
+    posts = Post.objects.filter(status=Post.Status.PUBLISHED)
     return render(
         request,
         'blog/post/list.html',
@@ -20,6 +20,6 @@ def post_detail(request, id):
     return render(
         request,
         'blog/post/detail.html',
-        {'post', post}
+        {'post': post}
     )
 
