@@ -211,4 +211,4 @@ __marimo__/
 ./docker-compose.yml
 app/blogsite/db.sqlite3
 app/Dockerfile
-./.idea
+./.idea/
